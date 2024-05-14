@@ -19,25 +19,22 @@ public class RotateArray {
     }
 
     public static void rotateArr(int[] arr, int d){
+        System.out.println(Arrays.toString(arr));
         int size = arr.length;
-        for(int i=0,j=d-1; i<j; i++,j--){
-            int temp = arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-        }
-        System.out.println(Arrays.toString(arr));
-        for(int i=d, j=size-1;i<j;i++,j--){
-            int temp = arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-        }
-        System.out.println(Arrays.toString(arr));
-        for(int i=0,j=size-1; i<j ;i++,j--){
-            int temp = arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-        }
 
+        reverse(arr,0,d-1);
+        reverse(arr,d,size-1);
+        reverse(arr,0,size-1);
+    }
+
+    public static void reverse(int[] arr, int low, int high){
+        while(low<high){
+            int temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+            low++;
+            high--;
+        }
         System.out.println(Arrays.toString(arr));
     }
 }
