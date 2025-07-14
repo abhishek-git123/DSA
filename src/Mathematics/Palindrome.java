@@ -1,7 +1,5 @@
 package Mathematics;
 
-import java.net.StandardSocketOptions;
-
 public class Palindrome {
     public static void main(String[] args) {
         int input = 78987;
