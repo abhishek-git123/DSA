@@ -8,9 +8,7 @@ public class PrintAllDivisors {
     }
 
     private static void printAllDivisors(int n){
-        System.out.print(1+" "+n+ " ");
-
-        for(int i=2; i*i <=n ;i++){
+        for(int i=1; i*i <=n ;i++){
             if(n%i == 0){
                 System.out.print(i+ " ");
                 //in case of perfect squares like 25, when i becomes 5, it will print 5, two times.
